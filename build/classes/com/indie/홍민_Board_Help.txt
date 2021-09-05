@@ -1,0 +1,94 @@
+Indie Project
+
+// (MVC) View
+
+// 좌측 메뉴 (aside)
+Board
+*(새로운) 소식 // News
+*매거진 // Magazine
+*이벤트 // Event // 없앨까 고민중.
+*공연 정보 // Concert
+Help 
+// 좌측메뉴가 아닌 header안에 로그인/회원가입 옆에 넣는 것은..? 
+공지사항 // Notice
+자주하는 질문 // FAQ
+1:1 문의 // QnA
+My page
+        프로필 // profile // 미정.. 안할가능성높음.
+플레이리스트 // Playlist
+문의내역 // QnAList
+좋아요한 곡들 // LikeSongs
+
+
+// 메인 화면 (서비스를 사용하는 화면)
+// 관리자(1)로 로그인시 수정.삭제.추가 버튼 추가.(?) 따로 view생성 고민즁.
+//Board (상위메뉴)
+News_form.jsp // 새로운소식(이슈등)
+Magazine_form.jsp // 잡지(인터뷰및소개)
+Event_form.jsp // 이벤트(promotion)
+Concert_form.jsp // 공연소식
+
+//Help (상위메뉴)
+Notice_form.jsp // 공지사항
+FAQ_form.jsp // 자주하는질문
+QnA_form.jsp // 질의응답(1:1문의)
+
+//My page
+Playlist_form.jsp // 플레이리스트
+QnAList_form.jsp // 문의내역
+LikeSongs_form.jsp // 좋아요한 곡들 리스트(최신 날짜 순)
+
+
+// (MVC) Controller
+
+// com.indie.controller
+// 입력받은 url에 따라 ActionController실행.
+BoardActionFactory.java
+// IindieServlet.java
+
+//controller들
+//주제별 컨트롤러 하나로 묶은뒤 들어온 값에 따라 분류해주는방법으로 할지 고민중).
+// if 일반회원 - 읽기전용 페이지.
+// if 관리자 - CRUD도 구현된 페이지.
+
+//Board
+NewsDeleteConroller.java
+NewsUpdateController.java
+NewsInsertController.java
+NewsFormController.java
+
+MagazineFormController.java
+MagazineDeleteController.java
+MagazineUpdateController.java
+MagazineInsertController.java
+
+EventFormController.java
+EventDeleteController.java
+EventUpdateController.java
+EventInsertController.java
+
+ConcertFormController.java
+ConcertDeleteController.java
+ConcertUpdateController.java
+ConcertInsetController.java
+
+//Help
+NoticeFormController.java
+NotoceDeleteController.java
+NoticeUpdatwController.java
+NoticeInsertController.java
+
+FAQFormController.java
+FAQDeleteController.java
+FAQUpdateController.java
+FAQInsertController.java
+
+QnAFormController.java
+QnADeleteController.java
+QnAUpdateController.java
+QnAInsertController.java
+
+// (MVC) Model
+
+// Bpard view들
+ insert, update, delete, 최신순 정렬 기능 추가.
