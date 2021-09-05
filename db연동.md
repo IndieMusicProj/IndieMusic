@@ -11,6 +11,7 @@
 ```
 CREATE USER Indie identified by 1234;
 GRANT CONNECT, RESOURCE TO Indie;
+GRANT CREATE TABLE TO Indie;
 GRANT CREATE VIEW TO Indie;
 
 SELECT * FROM all_users;
