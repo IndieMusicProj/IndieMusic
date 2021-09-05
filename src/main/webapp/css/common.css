@@ -1,0 +1,152 @@
+@charset "UTF-8";
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+   초기화 코드
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+	blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
+	em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+	b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas,
+	details, embed, figure, figcaption, footer, header, hgroup, menu, nav,
+	output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup,
+	menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ------------- common.css ------------- */
+#wrap {
+	width: 100%;
+	text-align: left;
+	margin: 0 auto;
+	margin-right: auto;
+	margin-left: auto;
+	background-repeat: repeat-y;
+}
+
+/* ------------- header ------------- */
+#header .topBtns {
+	padding-top: 30px;
+	min-height: 20px;
+}
+
+#header .frame>.topBtns {
+	position: relative;
+	left: 90%;
+}
+
+#header .topBtns>a:link, a:hover, a:visited, a:active, a:focus {
+	text-decoration: none;
+	color: black;
+	padding-right: 15px;
+	font-size: 0.7rem;
+}
+
+.mainHeader {
+	text-align: center;
+	background-color: #f6f6f6;
+	min-height: 150px;
+	border-bottom: black solid 2px;
+	height: 100%;
+}
+
+.frame {
+	margin: auto auto;
+	width: 1000px;
+	height: 100%;
+}
+
+/* ------------- 중간부분 ------------- */
+#mid {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+/* ------------- aside ------------- */
+#aside {
+	width: 25%;
+	padding: 8px 0px 8px 0px;
+}
+
+#aside>.subNavWrap {
+	margin: 20px;
+	padding-bottom: 15px;
+	border-bottom: black solid 2px;
+}
+
+.subNavWrap>.title {
+	border-bottom: gray 1px solid;
+}
+
+.subNavWrap span.navName {
+	font-size: 1.5rem;
+	font-weight: bold;
+	line-height: 2.8rem;
+}
+
+#aside>.subNavWrap a:link, a:hover {
+	color: black;
+	text-decoration: none;
+	font-size: 1.2rem;
+	
+}
+
+.subNavWrap .subMenu td, td:hover {
+line-height: 2.2rem;
+}
+
+
+/* ------------- main ------------- */
+#main {
+	width: 75%;
+	float: right;
+	min-height: 900px;
+	border-left: black solid 2px;
+}
+
+#main div {
+	margin: 20px;
+}
+
+/* ------------- footer ------------- */
+#footer {
+	clear: both;
+	margin: auto auto;
+	background-color: #313131;
+	min-height: 120px;
+	color: white;
+	text-align: center;
+}
