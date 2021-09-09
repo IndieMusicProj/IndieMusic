@@ -93,11 +93,19 @@ table {
 #mid {
 	width: 1000px;
 	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 25% 75%;
+}
+
+#mid > .grid1co {
+	grid-column: 1/4;
+}
+#mid > .grid2co {
+	grid-column: 3/4;
 }
 
 /* ------------- aside ------------- */
 #aside {
-	width: 25%;
 	padding: 8px 0px 8px 0px;
 }
 
@@ -132,7 +140,6 @@ line-height: 2.2rem;
 /* ------------- main ------------- */
 #main {
 	width: 75%;
-	float: right;
 	min-height: 900px;
 	border-left: black solid 2px;
 }

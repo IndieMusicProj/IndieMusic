@@ -9,20 +9,20 @@
 			<br>
 			<ul>
 				<li class="list">
-					<a href="#">
+					<a href="IndieServlet?command=AllPopular">
 						- 종합
 					</a>
 				</li>
 				<br>
 				<li class="list">
-					<a href="#">
+					<a href="IndieServlet?command=KorPopular">
 						- 국내
 					</a>
 				</li>
 				<br>
 				<li class="list">
-					<a href="#">
-						- 국외
+					<a href="IndieServlet?command=ForPopular">
+						- 해외
 					</a>
 				</li>
 				<br>
@@ -31,23 +31,23 @@
 		<div class="subNavWrap">
 			<div class="title">
 				<img src="" alt="">
-				<span class="navName">음악</span>
+				<span class="navName">최신음악</span>
 			</div>
 			<br>
 			<table class="subMenu">
 				<tr>
 					<td>
-						<a href="#">- 국외</a>
+						<a href="IndieServlet?command=AllNewest">- 종합</a>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<a href="#">- 국외</a>
+						<a href="IndieServlet?command=KorNewest">- 국내</a>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<a href="#">- 국외</a>
+						<a href="IndieServlet?command=ForNewest">- 해외</a>
 					</td>
 				</tr>
 			</table>
@@ -60,25 +60,25 @@
 			<br>
 			<ul>
 				<li class="list">
-					<a href="#">
+					<a href="IndieServlet?command=KorDance">
 						- 댄스/팝
 					</a>
 				</li>
 				<br>
 				<li class="list">
-					<a href="#">
+					<a href="IndieServlet?command=KorBallad">
 						- 발라드
 					</a>
 				</li>
 				<br>
 				<li class="list">
-					<a href="#">
+					<a href="IndieServlet?command=KorHiphop">
 						- 힙합
 					</a>
 				</li>
 				<br>
 				<li class="list">
-					<a href="#">
+					<a href="IndieServlet?command=KorIndie">
 						- 인디
 					</a>
 				</li>
@@ -112,4 +112,6 @@
 				<br>
 			</ul>
 		</div>
+		
+		<div class="hr"></div>
 	</div>

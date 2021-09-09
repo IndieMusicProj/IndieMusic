@@ -2,17 +2,15 @@
 	pageEncoding="UTF-8"%>
 <div id="main">
 <div class="contents">
-안녕하세요<br>
+<br>
 
 <br><br>
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto voluptatum in possimus autem doloribus labore repellat obcaecati quo corporis at quasi voluptates reprehenderit maxime nulla aut culpa asperiores accusamus unde.
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto voluptatum in possimus autem doloribus labore repellat obcaecati quo corporis at quasi voluptates reprehenderit maxime nulla aut culpa asperiores accusamus unde.
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto voluptatum in possimus autem doloribus labore repellat obcaecati quo corporis at quasi voluptates reprehenderit maxime nulla aut culpa asperiores accusamus unde.
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto voluptatum in possimus autem doloribus labore repellat obcaecati quo corporis at quasi voluptates reprehenderit maxime nulla aut culpa asperiores accusamus unde.
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto voluptatum in possimus autem doloribus labore repellat obcaecati quo corporis at quasi voluptates reprehenderit maxime nulla aut culpa asperiores accusamus unde.
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto voluptatum in possimus autem doloribus labore repellat obcaecati quo corporis at quasi voluptates reprehenderit maxime nulla aut culpa asperiores accusamus unde.
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto voluptatum in possimus autem doloribus labore repellat obcaecati quo corporis at quasi voluptates reprehenderit maxime nulla aut culpa asperiores accusamus unde.
+차트 탑 텐자리
+
+<h1>곡차트</h1> 인기순
+<br><br>
+<span style="font-size: 100px">게시판 자리</span>
 
 </div>
 </div>
