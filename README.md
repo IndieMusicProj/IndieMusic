@@ -3,8 +3,7 @@ IndieMusic BackUp Repo
 
 ## db 설계
 
-![image](https://user-images.githubusercontent.com/84966961/132636165-7c4bbd28-cc78-4dd1-8c3f-822e6845ac1c.png)
-
+![image](https://user-images.githubusercontent.com/84966961/132639663-8317fd6e-53be-411a-aedc-554b1c79379b.png)
 
 ## 일정
 
