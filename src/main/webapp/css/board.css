@@ -1,0 +1,14 @@
+#content_wrap {
+				width: 100%;
+				text-align: left;
+				margin: 0 auto;
+			}
+			#table {
+				border: 1px solid black;
+			}
+			.board_list {
+				    position: relative;
+				    width: 100%;
+				    display: inline-block;
+				    vertical-align: top;
+		    }

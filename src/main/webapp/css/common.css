@@ -17,7 +17,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, hgroup,
@@ -58,21 +57,28 @@ table {
 }
 
 /* ------------- header ------------- */
-#header .topBtns {
-	padding-top: 30px;
-	min-height: 20px;
+div.topBtns {
+	padding-top: 20px;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(10%, auto));
+	text-align: center;
 }
 
-#header .frame>.topBtns {
-	position: relative;
-	left: 90%;
+#header div.topBtns>a.adminlogin {
+	grid-column: -4;
+}
+#header div.topBtns>a.login {
+	grid-column: -3;
+}
+#header div.topBtns>a.join {
+	grid-column: -2;
 }
 
-#header .topBtns>a:link, a:hover, a:visited, a:active, a:focus {
+#header a.btns {
 	text-decoration: none;
 	color: black;
-	padding-right: 15px;
 	font-size: 0.7rem;
+	padding-right: 15px;
 }
 
 .mainHeader {
@@ -86,7 +92,29 @@ table {
 .frame {
 	margin: auto auto;
 	width: 1000px;
-	height: 100%;
+}
+
+.logo {
+	margin: 20px
+}
+
+div.search {
+	padding: 20px;
+	border-color: white;
+}
+
+input.searchKeyword {
+	width: 400px;
+	height:2rem;
+	border: 10px black solid;
+	border-radius: 40px;
+}
+
+a.searchIcon {
+	position: relative;
+	left: -50px;
+	top: 7.5px;
+	z-index: 2;
 }
 
 /* ------------- 중간부분 ------------- */
@@ -97,11 +125,8 @@ table {
 	grid-template-columns: 25% 75%;
 }
 
-#mid > .grid1co {
-	grid-column: 1/4;
-}
-#mid > .grid2co {
-	grid-column: 3/4;
+#mid > #grid1co {
+	border-right: black solid 2px;
 }
 
 /* ------------- aside ------------- */
@@ -117,6 +142,7 @@ table {
 
 .subNavWrap>.title {
 	border-bottom: gray 1px solid;
+	padding-left: 20px
 }
 
 .subNavWrap span.navName {
@@ -125,35 +151,37 @@ table {
 	line-height: 2.8rem;
 }
 
-#aside>.subNavWrap a:link, a:hover {
+#aside>.subNavWrap li.list {
+	padding-left: 70px
+}
+#aside>.subNavWrap li.list > a.navbtn:link, a.navbtn:hover, a.navbtn:visited {
 	color: black;
 	text-decoration: none;
 	font-size: 1.2rem;
 	
 }
 
-.subNavWrap .subMenu td, td:hover {
+.subNavWrap .subMenu {
 line-height: 2.2rem;
 }
 
 
 /* ------------- main ------------- */
-#main {
-	width: 75%;
-	min-height: 900px;
-	border-left: black solid 2px;
-}
+/* #main { */
+/* 	width: 75%; */
+/* 	min-height: 900px; */
+/* } */
 
-#main div {
-	margin: 20px;
-}
+/* #main div { */
+/* 	margin: 20px; */
+/* } */
 
 /* ------------- footer ------------- */
 #footer {
 	clear: both;
 	margin: auto auto;
 	background-color: #313131;
-	min-height: 120px;
+	min-height: 80px;
 	color: white;
 	text-align: center;
 }

@@ -5,11 +5,26 @@ import com.indie.controller.action.IndexAction;
 import com.indie.controller.action.admin.AdminIndexAction;
 import com.indie.controller.action.admin.AdminLoginAction;
 import com.indie.controller.action.admin.AdminLoginFormAction;
-import com.indie.controller.action.admin.InsertAdminFormAction;
-import com.indie.controller.action.admin.InsertMusicAction;
-import com.indie.controller.action.admin.InsertMusicFormAction;
+import com.indie.controller.action.admin.ManageAdminAction;
+import com.indie.controller.action.admin.ManageBoardAction;
+import com.indie.controller.action.admin.ManageMemberAction;
+import com.indie.controller.action.admin.ManageMusicAction;
+import com.indie.controller.action.admin.ManageMusicDeleteAction;
+import com.indie.controller.action.admin.ManageMusicDetailAction;
+import com.indie.controller.action.admin.ManageMusicUpdateAction;
+import com.indie.controller.action.board.BoardDeleteAction;
+import com.indie.controller.action.board.BoardDetail_FormAction;
+import com.indie.controller.action.board.BoardInsertAction;
+import com.indie.controller.action.board.BoardListAll_FormAction;
+import com.indie.controller.action.board.BoardListCategory_FormAction;
+import com.indie.controller.action.board.BoardUpdateAction;
 import com.indie.controller.action.member.JoinAction;
 import com.indie.controller.action.member.LoginAction;
+import com.indie.controller.action.member.LogoutAction;
+import com.indie.controller.action.music.AllBalladMusicAction;
+import com.indie.controller.action.music.AllDanceMusicAction;
+import com.indie.controller.action.music.AllHiphopMusicAction;
+import com.indie.controller.action.music.AllIndieMusicAction;
 import com.indie.controller.action.music.AllNewMusicAction;
 import com.indie.controller.action.music.AllPopMusicAction;
 import com.indie.controller.action.music.ForBalladMusicAction;
@@ -24,6 +39,9 @@ import com.indie.controller.action.music.KorHiphopMusicAction;
 import com.indie.controller.action.music.KorIndieMusicAction;
 import com.indie.controller.action.music.KorNewMusicAction;
 import com.indie.controller.action.music.KorPopMusicAction;
+import com.indie.controller.action.playlist.Playlist_DeleteAction;
+import com.indie.controller.action.playlist.Playlist_FormAction;
+import com.indie.controller.action.playlist.Playlist_PlayAction;
 
 public class ActionFactory {
 	private static ActionFactory instance = new ActionFactory(); 
@@ -50,13 +68,29 @@ public class ActionFactory {
 			action = new AdminLoginAction();
 		} else if(command.equals("admin_index")) {
 			action = new AdminIndexAction();
-		} else if(command.equals("insert_music_form")) {
-			action = new InsertMusicFormAction();
-		} else if(command.equals("insert_admin_form")) {
-			action = new InsertAdminFormAction();
+		} else if(command.equals("manage_member")) {
+			action = new ManageMemberAction();
+		} else if(command.equals("manage_music")) {
+			action = new ManageMusicAction();
+		} else if(command.equals("manage_music_detail")) {
+			action = new ManageMusicDetailAction();
+		} else if(command.equals("manage_music_insert_form")) {
+			action = new ManageMusicDetailAction();
+		} else if(command.equals("manage_music_insert")) {
+			action = new ManageMusicDetailAction();
+		} else if(command.equals("manage_music_update")) {
+			action = new ManageMusicUpdateAction();
+		} else if(command.equals("manage_music_delete")) {
+			action = new ManageMusicDeleteAction();
+		} else if(command.equals("manage_board")) {
+			action = new ManageBoardAction();
+		} else if(command.equals("manage_admin")) {
+			action = new ManageAdminAction();
 		}
 		// music part
-		else if(command.equals("AllPopular")) {
+		else if(command.equals("index")) {
+			action = new IndexAction();
+		}else if(command.equals("AllPopular")) {
 			action = new AllPopMusicAction();
 		}else if(command.equals("KorPopular")) {
 			action = new KorPopMusicAction();
@@ -84,6 +118,14 @@ public class ActionFactory {
 			action = new ForHiphopMusicAction();
 		}else if(command.equals("ForIndie")) {
 			action = new ForIndieMusicAction();
+		}else if(command.equals("AllBallad")) {
+			action = new AllBalladMusicAction();
+		}else if(command.equals("AllDance")) {
+			action = new AllDanceMusicAction();
+		}else if(command.equals("AllHiphop")) {
+			action = new AllHiphopMusicAction();
+		}else if(command.equals("AllIndie")) {
+			action = new AllIndieMusicAction();
 		}
 		// join part
 		else if(command.equals("login")) {
@@ -91,10 +133,36 @@ public class ActionFactory {
 		}else if(command.equals("join")) {
 			action = new JoinAction();
 		}
-		// board part
-		
-		
-		
+		// board
+		else if(command.equals("BoardList_All_form")) {
+			action = new BoardListAll_FormAction();
+		}else if(command.equals("BoardList_Category_form")) {
+			action = new BoardListCategory_FormAction();
+		}else if(command.equals("Board_Detail_form")) {
+			action = new BoardDetail_FormAction();
+		}else if(command.equals("Board_Delete")) {
+			action = new BoardDeleteAction();
+		}else if(command.equals("Board_Insert")) {
+			action = new BoardInsertAction();
+		}else if(command.equals("Board_Update")) {
+			action = new BoardUpdateAction();
+		}
+		// playlist
+		else if(command.equals("Playlist_FormAction")) {
+			action = new Playlist_FormAction();
+		}else if(command.equals("Playlist_PlayAction")) {
+			action = new Playlist_PlayAction();
+		}else if(command.equals("Playlist_DeleteAction")) {
+			action = new Playlist_DeleteAction();
+		}
+		// member
+		else if(command.equals("login")) {
+			action = new LoginAction();
+		}else if(command.equals("join")) {
+			action = new JoinAction();
+		}else if(command.equals("logout")) {
+			action = new LogoutAction();
+		}
 		
 		return action;
 	}

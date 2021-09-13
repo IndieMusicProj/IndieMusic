@@ -16,7 +16,7 @@ public class IndieServlet extends HttpServlet {
    
    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	   String command = request.getParameter("command");
-	   System.out.println("NonageServlet에 요청 사항 : "+ command);
+	   System.out.println("IndieServlet에 요청 사항 : "+ command);
 
 	   ActionFactory af = ActionFactory.getInstance();
 	   Action action = af.getAction(command);
