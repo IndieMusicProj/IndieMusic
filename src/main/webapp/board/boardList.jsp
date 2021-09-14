@@ -30,6 +30,11 @@ ol, ul, li {
 }
 
 tr.board_list {
+	-webkit-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	-moz-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	-ms-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	-o-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
 	padding: 16px 10px;
 	border-bottom: 1px solid #e6e6e6;
 	height: 135px;
@@ -37,6 +42,10 @@ tr.board_list {
 	width: 100%;
 	display: inline-block;
 	vertical-align: top;
+}
+
+tr.board_list:hover {
+	box-shadow: rgba(30, 22, 54, 0.3) 0 0px 0px 100px inset;
 }
 
 .board_list .list_date {
@@ -51,23 +60,6 @@ td.image {
 	float: left;
 	width: 240px;
 	margin-right: 24px;
-}
-
-.board_list .image img {
-	
-}
-
-.board_list .thumb_frame {
-	display: block;
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 240px;
-	height: 133px;
-	border: 1px solid #000;
-	opacity: 0.2;
-	filter: alpha(opacity = 20);
-	padding-left: 10px;
 }
 
 .board_list dl {
@@ -89,14 +81,14 @@ td.image {
 	text-overflow: ellipsis;
 }
 
-td.list_content {
+dd.list_content {
 	color: #666;
 	line-height: 20px;
 	min-height: 50px;
-	margin: 0 15px 15px 0;
 	word-wrap: break-word;
 	word-break: break-all;
 	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .board_list .list_detail {

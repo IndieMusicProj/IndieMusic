@@ -16,12 +16,14 @@ public class ManageMusicAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "/adminMode/manageMusic.jsp";
+		System.out.println("노래 관리 컨트롤러 실행");
+		String url = "/adminMode/music/manageMusic.jsp";
 		
 		MusicDAO musicDAO = MusicDAO.getInstance();
 		
-		ArrayList<MusicVO> musicInfoList = (ArrayList<MusicVO>) musicDAO.getAllPopular();
+		ArrayList<MusicVO> musicInfoList = (ArrayList<MusicVO>) musicDAO.getMusicList();
 		
+		request.setAttribute("selected", "music");
 		request.setAttribute("musicInfoList", musicInfoList);
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url);

@@ -56,15 +56,17 @@ table {
 #mid {
 	margin: 0 auto;
 	display: grid;
-	grid-template-columns: 25% 75%;
+	grid-template-columns: 400px 1fr;
 }
 
 div#mid>div#grid1co {
+	width:400px;
 	background-color: #90abb7;
+	min-height: 1250px;
 }
 
 div#mid>div#grid2co {
-	
+	padding: 50px 0px 0px 50px;
 }
 
 /* ------------- aside ------------- */
@@ -114,3 +116,5 @@ img.sideImg {
 	width: 24px;
 	height: 24px;
 }
+
+/* ------------- Main ------------- */

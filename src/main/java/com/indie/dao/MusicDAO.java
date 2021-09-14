@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.indie.dto.BoardVO;
 import com.indie.dto.MusicVO;
 
 import util.DBManager;
@@ -36,7 +37,7 @@ public class MusicDAO {
 
 			while (rs.next()) {
 				MusicVO musicVO = new MusicVO();
-				musicVO.setM_id(rs.getString("M_ID"));
+				musicVO.setM_id(rs.getInt("M_ID"));
 				musicVO.setM_genre(rs.getString("M_GENRE"));
 				musicVO.setM_nation(rs.getString("M_NATION"));
 				musicVO.setM_name(rs.getString("M_NAME"));
@@ -74,7 +75,7 @@ public class MusicDAO {
 
 			while (rs.next()) {
 				MusicVO musicVO = new MusicVO();
-				musicVO.setM_id(rs.getString("M_ID"));
+				musicVO.setM_id(rs.getInt("M_ID"));
 				musicVO.setM_genre(rs.getString("M_GENRE"));
 				musicVO.setM_nation(rs.getString("M_NATION"));
 				musicVO.setM_name(rs.getString("M_NAME"));
@@ -113,7 +114,7 @@ public class MusicDAO {
 
 			while (rs.next()) {
 				MusicVO musicVO = new MusicVO();
-				musicVO.setM_id(rs.getString("M_ID"));
+				musicVO.setM_id(rs.getInt("M_ID"));
 				musicVO.setM_genre(rs.getString("M_GENRE"));
 				musicVO.setM_nation(rs.getString("M_NATION"));
 				musicVO.setM_name(rs.getString("M_NAME"));
@@ -152,7 +153,7 @@ public class MusicDAO {
 
 			while (rs.next()) {
 				MusicVO musicVO = new MusicVO();
-				musicVO.setM_id(rs.getString("M_ID"));
+				musicVO.setM_id(rs.getInt("M_ID"));
 				musicVO.setM_genre(rs.getString("M_GENRE"));
 				musicVO.setM_nation(rs.getString("M_NATION"));
 				musicVO.setM_name(rs.getString("M_NAME"));
@@ -190,7 +191,7 @@ public class MusicDAO {
 
 			while (rs.next()) {
 				MusicVO musicVO = new MusicVO();
-				musicVO.setM_id(rs.getString("M_ID"));
+				musicVO.setM_id(rs.getInt("M_ID"));
 				musicVO.setM_genre(rs.getString("M_GENRE"));
 				musicVO.setM_nation(rs.getString("M_NATION"));
 				musicVO.setM_name(rs.getString("M_NAME"));
@@ -229,7 +230,7 @@ public class MusicDAO {
 
 			while (rs.next()) {
 				MusicVO musicVO = new MusicVO();
-				musicVO.setM_id(rs.getString("M_ID"));
+				musicVO.setM_id(rs.getInt("M_ID"));
 				musicVO.setM_genre(rs.getString("M_GENRE"));
 				musicVO.setM_nation(rs.getString("M_NATION"));
 				musicVO.setM_name(rs.getString("M_NAME"));
@@ -268,7 +269,7 @@ public class MusicDAO {
 
 			while (rs.next()) {
 				MusicVO musicVO = new MusicVO();
-				musicVO.setM_id(rs.getString("M_ID"));
+				musicVO.setM_id(rs.getInt("M_ID"));
 				musicVO.setM_genre(rs.getString("M_GENRE"));
 				musicVO.setM_nation(rs.getString("M_NATION"));
 				musicVO.setM_name(rs.getString("M_NAME"));
@@ -307,7 +308,7 @@ public class MusicDAO {
 
 			while (rs.next()) {
 				MusicVO musicVO = new MusicVO();
-				musicVO.setM_id(rs.getString("M_ID"));
+				musicVO.setM_id(rs.getInt("M_ID"));
 				musicVO.setM_genre(rs.getString("M_GENRE"));
 				musicVO.setM_nation(rs.getString("M_NATION"));
 				musicVO.setM_name(rs.getString("M_NAME"));
@@ -346,7 +347,7 @@ public class MusicDAO {
 
 			while (rs.next()) {
 				MusicVO musicVO = new MusicVO();
-				musicVO.setM_id(rs.getString("M_ID"));
+				musicVO.setM_id(rs.getInt("M_ID"));
 				musicVO.setM_genre(rs.getString("M_GENRE"));
 				musicVO.setM_nation(rs.getString("M_NATION"));
 				musicVO.setM_name(rs.getString("M_NAME"));
@@ -385,7 +386,7 @@ public class MusicDAO {
 
 			while (rs.next()) {
 				MusicVO musicVO = new MusicVO();
-				musicVO.setM_id(rs.getString("M_ID"));
+				musicVO.setM_id(rs.getInt("M_ID"));
 				musicVO.setM_genre(rs.getString("M_GENRE"));
 				musicVO.setM_nation(rs.getString("M_NATION"));
 				musicVO.setM_name(rs.getString("M_NAME"));
@@ -424,7 +425,7 @@ public class MusicDAO {
 
 			while (rs.next()) {
 				MusicVO musicVO = new MusicVO();
-				musicVO.setM_id(rs.getString("M_ID"));
+				musicVO.setM_id(rs.getInt("M_ID"));
 				musicVO.setM_genre(rs.getString("M_GENRE"));
 				musicVO.setM_nation(rs.getString("M_NATION"));
 				musicVO.setM_name(rs.getString("M_NAME"));
@@ -464,7 +465,7 @@ public class MusicDAO {
 
 			while (rs.next()) {
 				MusicVO musicVO = new MusicVO();
-				musicVO.setM_id(rs.getString("M_ID"));
+				musicVO.setM_id(rs.getInt("M_ID"));
 				musicVO.setM_genre(rs.getString("M_GENRE"));
 				musicVO.setM_nation(rs.getString("M_NATION"));
 				musicVO.setM_name(rs.getString("M_NAME"));
@@ -504,7 +505,7 @@ public class MusicDAO {
 
 			while (rs.next()) {
 				MusicVO musicVO = new MusicVO();
-				musicVO.setM_id(rs.getString("M_ID"));
+				musicVO.setM_id(rs.getInt("M_ID"));
 				musicVO.setM_genre(rs.getString("M_GENRE"));
 				musicVO.setM_nation(rs.getString("M_NATION"));
 				musicVO.setM_name(rs.getString("M_NAME"));
@@ -544,7 +545,7 @@ public class MusicDAO {
 
 			while (rs.next()) {
 				MusicVO musicVO = new MusicVO();
-				musicVO.setM_id(rs.getString("M_ID"));
+				musicVO.setM_id(rs.getInt("M_ID"));
 				musicVO.setM_genre(rs.getString("M_GENRE"));
 				musicVO.setM_nation(rs.getString("M_NATION"));
 				musicVO.setM_name(rs.getString("M_NAME"));
@@ -584,7 +585,7 @@ public class MusicDAO {
 
 			while (rs.next()) {
 				MusicVO musicVO = new MusicVO();
-				musicVO.setM_id(rs.getString("M_ID"));
+				musicVO.setM_id(rs.getInt("M_ID"));
 				musicVO.setM_genre(rs.getString("M_GENRE"));
 				musicVO.setM_nation(rs.getString("M_NATION"));
 				musicVO.setM_name(rs.getString("M_NAME"));
@@ -624,7 +625,7 @@ public class MusicDAO {
 
 			while (rs.next()) {
 				MusicVO musicVO = new MusicVO();
-				musicVO.setM_id(rs.getString("M_ID"));
+				musicVO.setM_id(rs.getInt("M_ID"));
 				musicVO.setM_genre(rs.getString("M_GENRE"));
 				musicVO.setM_nation(rs.getString("M_NATION"));
 				musicVO.setM_name(rs.getString("M_NAME"));
@@ -664,7 +665,7 @@ public class MusicDAO {
 
 			while (rs.next()) {
 				MusicVO musicVO = new MusicVO();
-				musicVO.setM_id(rs.getString("M_ID"));
+				musicVO.setM_id(rs.getInt("M_ID"));
 				musicVO.setM_genre(rs.getString("M_GENRE"));
 				musicVO.setM_nation(rs.getString("M_NATION"));
 				musicVO.setM_name(rs.getString("M_NAME"));
@@ -704,7 +705,7 @@ public class MusicDAO {
 
 			while (rs.next()) {
 				MusicVO musicVO = new MusicVO();
-				musicVO.setM_id(rs.getString("M_ID"));
+				musicVO.setM_id(rs.getInt("M_ID"));
 				musicVO.setM_genre(rs.getString("M_GENRE"));
 				musicVO.setM_nation(rs.getString("M_NATION"));
 				musicVO.setM_name(rs.getString("M_NAME"));
@@ -744,7 +745,7 @@ public class MusicDAO {
 
 			while (rs.next()) {
 				MusicVO musicVO = new MusicVO();
-				musicVO.setM_id(rs.getString("M_ID"));
+				musicVO.setM_id(rs.getInt("M_ID"));
 				musicVO.setM_genre(rs.getString("M_GENRE"));
 				musicVO.setM_nation(rs.getString("M_NATION"));
 				musicVO.setM_name(rs.getString("M_NAME"));
@@ -767,7 +768,46 @@ public class MusicDAO {
 
 	}
 
-//	1. 음악 상세정보 받기
+//  1. 음악 리스트 받기
+	public List<MusicVO> getMusicList() {
+		List<MusicVO> musicList = new ArrayList<MusicVO>();
+		String sql = "select * from (select * from music order by m_playcnt desc) order by m_id desc";
+
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+
+		try {
+			conn = DBManager.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+
+			while (rs.next()) {
+				MusicVO musicVO = new MusicVO();
+				musicVO.setM_id(rs.getInt("M_ID"));
+				musicVO.setM_genre(rs.getString("M_GENRE"));
+				musicVO.setM_nation(rs.getString("M_NATION"));
+				musicVO.setM_name(rs.getString("M_NAME"));
+				musicVO.setM_artist(rs.getString("M_ARTIST"));
+				musicVO.setM_album(rs.getString("M_ALBUM"));
+				musicVO.setM_album_pic(rs.getString("M_ALBUM_PIC"));
+				musicVO.setM_lyrics(rs.getString("M_LYRICS"));
+				musicVO.setM_playcnt(rs.getInt("M_PLAYCNT"));
+				musicVO.setM_indate(rs.getTimestamp("M_INDATE"));
+
+				musicList.add(musicVO);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBManager.close(conn, pstmt, rs);
+		}
+
+		return musicList;
+
+	}
+
+//	2. 음악 상세정보 받기
 	public MusicVO getMusic(int m_id) {
 		MusicVO musicVO = null;
 		String sql = "select * from music where m_id = ?";
@@ -783,7 +823,7 @@ public class MusicDAO {
 
 			if (rs.next()) {
 				musicVO = new MusicVO();
-				musicVO.setM_id(rs.getString("M_ID"));
+				musicVO.setM_id(rs.getInt("M_ID"));
 				musicVO.setM_genre(rs.getString("M_GENRE"));
 				musicVO.setM_nation(rs.getString("M_NATION"));
 				musicVO.setM_name(rs.getString("M_NAME"));
@@ -804,10 +844,10 @@ public class MusicDAO {
 
 	}
 
-//	2. 음악 추가 
+//	3. 음악 추가 
 	public void InsertMusic(MusicVO mVo) {
-		int re = 0;
-		String sql = "insert into music(m_id, m_genre, m_nation, m_name, m_artist, m_album, m_album_pic, m_lyrics, m_playcnt) values((SELECT NVL(MAX(board.b_num), 0)+1 FROM BOARD), ?, ?, ?, ?, ?,?,?,0)";
+		String sql = "insert into music(m_id, m_genre, m_nation, m_name, m_artist, m_album, m_album_pic, m_lyrics, m_playcnt)"
+				+ " values((SELECT NVL(MAX(music.m_id), 0)+1 FROM music), ?, ?, ?, ?, ?, ?, ?, 0)";
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 
@@ -831,14 +871,50 @@ public class MusicDAO {
 		}
 	}
 
-//	3. 음악 수정
+//	4. 음악 수정
 	public void updateMusic(MusicVO mVo) {
+		String sql = "update music set m_genre=?, m_nation=?, m_name=?, m_artist=?, m_album=?, m_album_pic=?, m_lyrics=? where m_id=?";
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		
+		try {
+			conn = DBManager.getConnection();
+			pstmt = conn.prepareStatement(sql);
 
+			pstmt.setString(1, mVo.getM_genre());
+			pstmt.setString(2, mVo.getM_nation());
+			pstmt.setString(3, mVo.getM_name());
+			pstmt.setString(4, mVo.getM_artist());
+			pstmt.setString(5, mVo.getM_album());
+			pstmt.setString(6, mVo.getM_album_pic());
+			pstmt.setString(7, mVo.getM_lyrics());
+			pstmt.setInt(8, mVo.getM_id());
+			
+			pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("updateBoard() 오류");
+		} finally {
+			DBManager.close(conn, pstmt);
+		}
 	}
 
-//	4. 음악 삭제
+//	5. 음악 삭제
 	public void deleteMusic(int m_id) {
-		// 음악 번호 들어오면 해당 음악 삭제하도록.
+		String sql = "delete music where m_id = " + m_id;
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+
+		try {
+			conn = DBManager.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.executeUpdate();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBManager.close(conn, pstmt);
+		}
 	}
 
 }

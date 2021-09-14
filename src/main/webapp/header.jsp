@@ -15,7 +15,7 @@
 				<c:when test="${empty sessionScope.loginUser}">
 					<div class="frame">
 						<div class="topBtns">
-							<a class="btns adminlogin" name=login href="IndieServlet?command=admin_login_form"
+							<a class="btns adminlogin" name=login href="${pageContext.request.contextPath}/IndieServlet?command=admin_login_form"
 								style="color: white;">관리자</a>
 							<a class="btns login" name=login href="${pageContext.request.contextPath}/member/login.jsp">로그인</a>
 							<a class="btns join" name=join href="${pageContext.request.contextPath}/member/join.jsp">회원가입</a>
@@ -36,7 +36,7 @@
 			</c:choose>
 			<div class="mainHeader">
 				<div class="frame">
-					<a href="IndieServlet?command=index">
+					<a href="${pageContext.request.contextPath}/IndieServlet?command=index">
 						<img class="logo" alt="로고이미지" src="${pageContext.request.contextPath}/img/common/logo_01.png">
 					</a>
 					<div class="search">

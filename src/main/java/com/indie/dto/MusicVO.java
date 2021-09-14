@@ -3,7 +3,7 @@ package com.indie.dto;
 import java.sql.Timestamp;
 
 public class MusicVO {
-	private String m_id;
+	private int m_id;
 	private String m_genre;
 	private String m_nation;
 	private String m_name;
@@ -14,10 +14,10 @@ public class MusicVO {
 	private int m_playcnt;
 	private Timestamp m_indate;
 	
-	public String getM_id() {
+	public int getM_id() {
 		return m_id;
 	}
-	public void setM_id(String m_id) {
+	public void setM_id(int m_id) {
 		this.m_id = m_id;
 	}
 	public String getM_genre() {

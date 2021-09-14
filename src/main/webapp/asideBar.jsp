@@ -75,10 +75,6 @@
 		<br>
 		<ul>
 			<li class="list">
-				<a class="navbtn" href="IndieServlet?command=BoardList_All_form&b_category=all">- 전체 </a>
-			</li>
-			<br>
-			<li class="list">
 				<a class="navbtn" href="IndieServlet?command=BoardList_Category_form&b_category=news"> - 뮤직 이슈 </a>
 			</li>
 			<br>

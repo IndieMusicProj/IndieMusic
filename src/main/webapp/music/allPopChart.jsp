@@ -107,7 +107,7 @@
 			<tr class="line">
 				<td width="5%" style="text-align:center"><span style="font-size:20px; color:#4C4C4C;">${status.count}</span></td>
 				<td width="10%"><a href="#"><img src="img/music/${chartList.m_album_pic}" width="50" height="50"/></a></td>
-				<td width="30%"><a href="#"><span style="font-size:20px; color:#4C4C4C;">${chartList.m_name}</a></span></td>
+				<td width="30%"><a href="IndieServlet?command=music_detail&m_id=${chartList.m_id}"><span style="font-size:20px; color:#4C4C4C;">${chartList.m_name}</a></span></td>
 				<td width="20%"><span style="font-size:20px; color:#BDBDBD;">${chartList.m_artist}</span></td>
 				<td width="20%"><span style="font-size:20px; color:#BDBDBD;">${chartList.m_album}</span></td>
 				<td class="icon"><a><img width="30" height="30" src="img/chart/icon_playBefore.png"/></a></td>

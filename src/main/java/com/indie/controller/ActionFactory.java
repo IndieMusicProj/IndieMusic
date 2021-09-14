@@ -5,9 +5,12 @@ import com.indie.controller.action.IndexAction;
 import com.indie.controller.action.admin.AdminIndexAction;
 import com.indie.controller.action.admin.AdminLoginAction;
 import com.indie.controller.action.admin.AdminLoginFormAction;
+import com.indie.controller.action.admin.ManageMusicInsertAction;
 import com.indie.controller.action.admin.ManageAdminAction;
 import com.indie.controller.action.admin.ManageBoardAction;
 import com.indie.controller.action.admin.ManageMemberAction;
+import com.indie.controller.action.admin.ManageMemberDetailAction;
+import com.indie.controller.action.admin.ManageMemberInsertAction;
 import com.indie.controller.action.admin.ManageMusicAction;
 import com.indie.controller.action.admin.ManageMusicDeleteAction;
 import com.indie.controller.action.admin.ManageMusicDetailAction;
@@ -39,6 +42,7 @@ import com.indie.controller.action.music.KorHiphopMusicAction;
 import com.indie.controller.action.music.KorIndieMusicAction;
 import com.indie.controller.action.music.KorNewMusicAction;
 import com.indie.controller.action.music.KorPopMusicAction;
+import com.indie.controller.action.music.MusicDetailAction;
 import com.indie.controller.action.playlist.Playlist_DeleteAction;
 import com.indie.controller.action.playlist.Playlist_FormAction;
 import com.indie.controller.action.playlist.Playlist_PlayAction;
@@ -70,17 +74,19 @@ public class ActionFactory {
 			action = new AdminIndexAction();
 		} else if(command.equals("manage_member")) {
 			action = new ManageMemberAction();
+		} else if(command.equals("member_insert")) {
+			action = new ManageMemberInsertAction();
+		} else if(command.equals("member_detail")) {
+			action = new ManageMemberDetailAction();
 		} else if(command.equals("manage_music")) {
 			action = new ManageMusicAction();
-		} else if(command.equals("manage_music_detail")) {
+		} else if(command.equals("music_insert")) {
+			action = new ManageMusicInsertAction();
+		} else if(command.equals("music_detail")) {
 			action = new ManageMusicDetailAction();
-		} else if(command.equals("manage_music_insert_form")) {
-			action = new ManageMusicDetailAction();
-		} else if(command.equals("manage_music_insert")) {
-			action = new ManageMusicDetailAction();
-		} else if(command.equals("manage_music_update")) {
+		} else if(command.equals("music_update")) {
 			action = new ManageMusicUpdateAction();
-		} else if(command.equals("manage_music_delete")) {
+		} else if(command.equals("music_delete")) {
 			action = new ManageMusicDeleteAction();
 		} else if(command.equals("manage_board")) {
 			action = new ManageBoardAction();
@@ -126,6 +132,8 @@ public class ActionFactory {
 			action = new AllHiphopMusicAction();
 		}else if(command.equals("AllIndie")) {
 			action = new AllIndieMusicAction();
+		}else if(command.equals("music_detail")) {
+			action = new MusicDetailAction();
 		}
 		// join part
 		else if(command.equals("login")) {

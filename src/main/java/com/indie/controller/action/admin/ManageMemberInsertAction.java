@@ -1,24 +1,23 @@
-package com.indie.controller.action.member;
+package com.indie.controller.action.admin;
 
 import java.io.IOException;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import com.indie.controller.action.Action;
 import com.indie.dao.MemberDAO;
+import com.indie.dao.MusicDAO;
 import com.indie.dto.MemberVO;
+import com.indie.dto.MusicVO;
 
-public class JoinAction implements Action {
+public class ManageMemberInsertAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "/member/login.jsp";
-		
-		HttpSession session= request.getSession();
+		System.out.println("회원 등록 컨트롤러 실행");
+		String url = "/IndieServlet?command=manage_member";
 		
 		MemberVO memberVO = new MemberVO();
 		
@@ -33,10 +32,7 @@ public class JoinAction implements Action {
 	    MemberDAO memberDAO = MemberDAO.getInstance();
 	    memberDAO.insertMember(memberVO);
 	    
-	    session.setAttribute("id",request.getParameter("id"));
-	    
-	    RequestDispatcher dispatcher = request.getRequestDispatcher(url);
-	    dispatcher.forward(request, response);
+		request.getRequestDispatcher(url).forward(request, response);
 	}
 
 }
