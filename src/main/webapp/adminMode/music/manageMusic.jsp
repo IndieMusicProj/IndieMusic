@@ -19,7 +19,7 @@ div#searchWrap {
 	padding: 25px 0px 25px 0px;
 }
 
-div#searchWrap select.selectCondition {
+div#searchWrap select.searchCondition {
 	width: 20%;
 	height: 50px;
 	border: #f6f6f6 1px solid;
@@ -108,24 +108,24 @@ td.tdframe {
 				<div id="title">
 					<h1 class="titleFormat">노래 관리</h1>
 				</div>
-				<form action="${pageContext.request.contextPath}/IndieServlet?command=search&tableName=member"
-					method="post">
+				<form action="${pageContext.request.contextPath}/IndieServlet?command=search" method="post">
 					<div id="searchWrap">
-						<select class="selectCondition">
-							<option>제목</option>
-							<option>내용</option>
-							<option>제목 + 내용</option>
-							<option>id 값</option>
+						<select name="searchCondition" class="searchCondition">
+							<option value="m_name">노래 제목</option>
+							<option value="m_artist">가수</option>
+							<option value="m_lyrics">가사</option>
 						</select>
-						<input class="searchKeyword" type="text" name="keyword" value="" placeholder="검색할 값을 작성해주세요.">
-						<input class="searchBtn" type="button" value="검색">
+						<input type="hidden" name="tableName" value="music">
+						<input class="searchKeyword" type="text" name="searchKeyword" value="" placeholder="검색할 값을 작성해주세요.">
+						<input class="searchBtn" type="submit" value="검색">
 					</div>
 				</form>
 				<div class="head">
 					<span class="listTitle">음악 리스트</span>
 					&nbsp;&nbsp;&nbsp;
 					<button class="insertBtn"
-						onclick="location.href='${pageContext.request.contextPath}/adminMode/music/insertMusicForm.jsp'">신규 등록</button>
+						onclick="location.href='${pageContext.request.contextPath}/adminMode/music/insertMusicForm.jsp'">신규
+						등록</button>
 				</div>
 				<table class="list">
 					<tr class="trGrid">
@@ -137,7 +137,8 @@ td.tdframe {
 						<th class="thead">가사</th>
 					</tr>
 					<c:forEach items="${musicInfoList}" var="musicInfo">
-						<tr class="list" onclick="location.href='IndieServlet?command=music_detail&m_id=${musicInfo.m_id}'">
+						<tr class="list"
+							onclick="location.href='IndieServlet?command=music_detail&m_id=${musicInfo.m_id}'">
 							<td class="tdframe" width="5%">
 								<span style="font-size: 20px; color: #4C4C4C;">${musicInfo.m_id}</span>
 							</td>
@@ -150,7 +151,7 @@ td.tdframe {
 							</td>
 							<td class="tdframe" width="30%">
 								<a
-									href="${pageContext.request.contextPath}/IndieServlet?command=manage_music_detail&m_id=${musicInfo.m_id}">
+									href="${pageContext.request.contextPath}/IndieServlet?command=music_detail&m_id=${musicInfo.m_id}">
 									<span style="font-size: 20px; color: #4C4C4C;">${musicInfo.m_name}
 								</a>
 								</span>

@@ -767,6 +767,44 @@ public class MusicDAO {
 		return musicList;
 
 	}
+	
+	public MusicVO getRandom(int num) {
+		MusicVO musicVO = null;
+		String sql = "select * from music where m_id = ?";
+
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+
+		try {
+			conn = DBManager.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, num);
+			rs = pstmt.executeQuery();
+
+			if(rs.next()) {
+				musicVO = new MusicVO();
+				musicVO.setM_id(rs.getInt("M_ID"));
+				musicVO.setM_genre(rs.getString("M_GENRE"));
+				musicVO.setM_nation(rs.getString("M_NATION"));
+				musicVO.setM_name(rs.getString("M_NAME"));
+				musicVO.setM_artist(rs.getString("M_ARTIST"));
+				musicVO.setM_album(rs.getString("M_ALBUM"));
+				musicVO.setM_album_pic(rs.getString("M_ALBUM_PIC"));
+				musicVO.setM_lyrics(rs.getString("M_LYRICS"));
+				musicVO.setM_playcnt(rs.getInt("M_PLAYCNT"));
+				musicVO.setM_indate(rs.getTimestamp("M_INDATE"));
+
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBManager.close(conn, pstmt, rs);
+		}
+
+		return musicVO;
+
+	}
 
 //  1. 음악 리스트 받기
 	public List<MusicVO> getMusicList() {
@@ -916,5 +954,108 @@ public class MusicDAO {
 			DBManager.close(conn, pstmt);
 		}
 	}
+	public void updateCnt(String id) {
+		int count = 0;
+		String readsql = "select m_playcnt from music where m_id = ?";
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		try {
+			conn = DBManager.getConnection();
+			pstmt = conn.prepareStatement(readsql);
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				count = rs.getInt(1);
+				count++;
+			}  
+			String sql = "update music set m_playcnt = ? where m_id = ?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, count);
+			pstmt.setString(2, id);
+			pstmt.executeUpdate();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBManager.close(conn, pstmt, rs);
+		}
+	}
+	
+	public MusicVO getLast() {
+		MusicVO musicVO = null;
+		String sql = "select * from music where m_id = (select max(m_id) from music)";
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+
+		try {
+			conn = DBManager.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+
+			if (rs.next()) {
+				musicVO = new MusicVO();
+				musicVO.setM_id(rs.getInt("M_ID"));
+				musicVO.setM_genre(rs.getString("M_GENRE"));
+				musicVO.setM_nation(rs.getString("M_NATION"));
+				musicVO.setM_name(rs.getString("M_NAME"));
+				musicVO.setM_artist(rs.getString("M_ARTIST"));
+				musicVO.setM_album(rs.getString("M_ALBUM"));
+				musicVO.setM_album_pic(rs.getString("M_ALBUM_PIC"));
+				musicVO.setM_lyrics(rs.getString("M_LYRICS"));
+				musicVO.setM_playcnt(rs.getInt("M_PLAYCNT"));
+				musicVO.setM_indate(rs.getTimestamp("M_INDATE"));
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBManager.close(conn, pstmt, rs);
+		}
+		return musicVO;
+
+	}
+	
+	public List<MusicVO> getRandomList(String m_genre) {
+		List<MusicVO> musicList = new ArrayList<MusicVO>();
+		String sql = "select * from music where m_genre = ?";
+
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+
+		try {
+			conn = DBManager.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1,m_genre);
+			rs = pstmt.executeQuery();
+
+			while (rs.next()) {
+				MusicVO musicVO = new MusicVO();
+				musicVO.setM_id(rs.getInt("M_ID"));
+				musicVO.setM_genre(rs.getString("M_GENRE"));
+				musicVO.setM_nation(rs.getString("M_NATION"));
+				musicVO.setM_name(rs.getString("M_NAME"));
+				musicVO.setM_artist(rs.getString("M_ARTIST"));
+				musicVO.setM_album(rs.getString("M_ALBUM"));
+				musicVO.setM_album_pic(rs.getString("M_ALBUM_PIC"));
+				musicVO.setM_lyrics(rs.getString("M_LYRICS"));
+				musicVO.setM_playcnt(rs.getInt("M_PLAYCNT"));
+				musicVO.setM_indate(rs.getTimestamp("M_INDATE"));
+
+				musicList.add(musicVO);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBManager.close(conn, pstmt, rs);
+		}
+
+		return musicList;
+
+	}
 
 }
+

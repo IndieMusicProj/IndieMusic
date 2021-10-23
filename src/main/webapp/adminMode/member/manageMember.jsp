@@ -19,7 +19,7 @@ div#searchWrap {
 	padding: 25px 0px 25px 0px;
 }
 
-div#searchWrap select.selectCondition {
+div#searchWrap select.searchCondition {
 	width: 20%;
 	height: 50px;
 	border: #f6f6f6 1px solid;
@@ -108,23 +108,25 @@ td.tdframe {
 				<div id="title">
 					<h1 class="titleFormat">회원 관리</h1>
 				</div>
-				<form action="${pageContext.request.contextPath}/IndieServlet?command=search&tableName=member"
+				<form action="${pageContext.request.contextPath}/IndieServlet?command=search"
 					method="post">
 					<div id="searchWrap">
-						<select name="" class="selectCondition">
-							<option value="m_name">이름</option>
-							<option value="m_id">내용</option>
-							<option value="m_num">회원번호</option>
+						<select name="searchCondition" class="searchCondition">
+							<option value="mb_name">회원 이름</option>
+							<option value="mb_id">회원 아이디</option>
+							<option value="mb_num">회원 번호</option>
 						</select>
-						<input class="searchKeyword" type="text" name="keyword" value="" placeholder="검색할 값을 작성해주세요.">
-						<input class="searchBtn" type="button" value="검색">
+						<input type="hidden" name="tableName" value="member">
+						<input class="searchKeyword" type="text" name="searchKeyword" value="" placeholder="검색할 값을 작성해주세요.">
+						<input class="searchBtn" type="submit" value="검색">
 					</div>
 				</form>
 				<div class="head">
-					<span class="listTitle">음악 리스트</span>
+					<span class="listTitle">회원 리스트</span>
 					&nbsp;&nbsp;&nbsp;
-					<button class="insertBtn"
-						onclick="location.href='${pageContext.request.contextPath}/adminMode/member/insertMemberForm.jsp'">신규 등록</button>
+<!-- 					<button class="insertBtn" -->
+<%-- 						onclick="location.href='${pageContext.request.contextPath}/adminMode/member/insertMemberForm.jsp'">신규 --%>
+<!-- 						등록</button> -->
 				</div>
 				<table class="list">
 					<tr class="trGrid">
@@ -139,7 +141,8 @@ td.tdframe {
 						<th class="thead">가입일자</th>
 					</tr>
 					<c:forEach items="${memberInfoList}" var="memberInfo">
-						<tr class="list" onclick="location.href='IndieServlet?command=member_detail&mb_id=${memberInfo.mb_id}'">
+						<tr class="list"
+							onclick="location.href='IndieServlet?command=member_detail&mb_id=${memberInfo.mb_id}'">
 							<td class="tdframe">
 								<span style="font-size: 20px; color: #4C4C4C;">${memberInfo.mb_num}</span>
 							</td>

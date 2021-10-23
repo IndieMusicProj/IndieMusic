@@ -18,5 +18,7 @@
 	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/lombok.jar"/>
 	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/ojdbc6.jar"/>
 	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/standard.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/main/webapp/WEB-INF/lib/javax.mail-1.6.2.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/activation.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

@@ -6,7 +6,7 @@ import java.sql.Timestamp;
 public class BoardVO {
 
 	private int b_num; // 글 번호 (primary key, sequence) // 수정 불가
-	private String adm_num; // 관리자 번호 // CUD 권한부여
+	private int adm_num; // 관리자 번호 // CUD 권한부여
 	private String b_category; // 카테고리 (글 종류)
 	private String b_title; // 글 제목
 	private String b_content; // 내용
@@ -63,6 +63,12 @@ public class BoardVO {
 	}
 	public void setB_upDate(Timestamp b_upDate) {
 		this.b_upDate = b_upDate;
+	}
+	public int getAdm_num() {
+		return adm_num;
+	}
+	public void setAdm_num(int i) {
+		this.adm_num = i;
 	}
 	
 	

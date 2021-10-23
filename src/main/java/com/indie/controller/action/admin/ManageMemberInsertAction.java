@@ -8,9 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.indie.controller.action.Action;
 import com.indie.dao.MemberDAO;
-import com.indie.dao.MusicDAO;
 import com.indie.dto.MemberVO;
-import com.indie.dto.MusicVO;
 
 public class ManageMemberInsertAction implements Action {
 

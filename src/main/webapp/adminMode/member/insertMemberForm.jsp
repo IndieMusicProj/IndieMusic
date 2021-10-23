@@ -112,12 +112,12 @@ input.deleteBtn:hover {
 				<div class="headerinfo">
 					<span style="font-size: 30px; font-weight: bold;">${memberInfo.m_name}</span>
 				</div>
-				<div class="musicInfo">
+				<div class="memberInfo">
 					<div class="photo">
 						<img class="album" alt="${memberInfo.m_album_pic }"
 							src="${pageContext.request.contextPath}/img/music/${memberInfo.m_album_pic }">
 					</div>
-					<form id="updateMusic"
+					<form id="insertMusic"
 						action="${pageContext.request.contextPath}/IndieServlet?command=join" method="post"
 						name="formm">
 						<table>

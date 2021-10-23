@@ -26,7 +26,7 @@ public class JoinAction implements Action {
 		memberVO.setMb_pwd(request.getParameter("pwd"));
 	    memberVO.setMb_name(request.getParameter("name"));
 	    memberVO.setMb_email(request.getParameter("email"));
-	    memberVO.setMb_zipNum(request.getParameter("zipNum"));
+	    memberVO.setMb_zipNum(request.getParameter("zip_num"));
 	    memberVO.setMb_address(request.getParameter("addr1") + request.getParameter("addr2"));
 	    memberVO.setMb_mobile(request.getParameter("mobile"));  
 	    

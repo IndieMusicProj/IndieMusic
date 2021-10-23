@@ -113,8 +113,8 @@ input.deleteBtn:hover {
 					<span style="font-size: 30px; font-weight: bold;">${memberInfo.mb_name}님의 정보</span>
 				</div>
 				<div class="memberInfo">
-					<form id="updateMusic"
-						action="${pageContext.request.contextPath}/IndieServlet?command=music_update" method="post"
+					<form id="updateMember"
+						action="${pageContext.request.contextPath}/IndieServlet?command=music_update&mb_num=${memberInfo.mb_num }" method="post"
 						name="formm">
 						<table>
 							<tr>
@@ -190,7 +190,7 @@ input.deleteBtn:hover {
 						</table>
 						<hr color="#f6f6f6">
 						<div id="buttons">
-							<input class="updateBtn" type="submit" value="수정">
+<!-- 							<input class="updateBtn" type="submit" value="수정"> -->
 							<input class="deleteBtn" type="button"
 								onclick="location.href='${pageContext.request.contextPath}/IndieServlet?command=member_delete&mb_num=${memberInfo.mb_num}'"
 								value="삭제">

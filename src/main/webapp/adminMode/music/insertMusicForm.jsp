@@ -51,7 +51,7 @@ input.login:hover {
 				</div>
 				<form id="insertMusic"
 					action="${pageContext.request.contextPath}/IndieServlet?command=music_insert" method="post"
-					name="formm">
+					name="formm" enctype="multipart/form-data">
 					<table>
 						<tr>
 							<td>
@@ -62,10 +62,6 @@ input.login:hover {
 								<br>
 								<input class="size" type="text" name="m_name">
 							</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td></td>
 							<td></td>
 						</tr>
 						<tr>

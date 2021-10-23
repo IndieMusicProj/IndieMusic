@@ -5,6 +5,7 @@
 <meta charset="UTF-8">
 <title>Indie Music</title>
 <link href="${pageContext.request.contextPath}/css/common.css" rel="stylesheet">
+<script type="text/javascript" src="${pageContext.request.contextPath}/member/member.js?ver=1"></script>
 <style type="text/css">
 body {
 	background-color: #f6f6f6;
@@ -74,14 +75,20 @@ input.checkBtn {
 	border: 0px;
 	outline: 0px;
 }
+
+input.checkBtn:hover {
+	box-shadow: rgba(30, 22, 54, 0.3) 0 0px 0px 40px inset;
+}
 </style>
 </head>
 <body>
 	<div id="main">
 		<article>
 			<div class="frame">
-				<img class="logo" alt="로고이미지" src="${pageContext.request.contextPath}/img/common/logo_01.png"
-					style="width: 150px;">
+				<a href="${pageContext.request.contextPath}/IndieServlet?command=index">
+					<img class="logo" alt="로고이미지" src="${pageContext.request.contextPath}/img/common/logo_01.png"
+						style="width: 150px;">
+				</a>
 			</div>
 			<form id="join" action="${pageContext.request.contextPath}/IndieServlet?command=join" method="post" name="formm">
 				<fieldset>
@@ -89,7 +96,7 @@ input.checkBtn {
 					<br>
 					<input class="size2" type="text" name="id" size="12">
 					<input class="size2" type="hidden" name="reid">
-					<input class="checkBtn" type="button" value="확인">
+					<input class="checkBtn" type="button" value="확인" onclick="idcheck()">
 					<br>
 					<label>비밀번호</label>
 					<br>
@@ -109,7 +116,7 @@ input.checkBtn {
 					<br>
 					<label>우편번호</label>
 					<br>
-					<input class="size2" type="text" name="zipNum" size="10" placeholder="000-000">
+					<input class="size2" type="text" name="zip_num" size="10" placeholder="000-000">
 					<input class="checkBtn" type="button" value="검색" onclick="post_zip()">
 					<br>
 					<label>주소</label>
@@ -122,7 +129,7 @@ input.checkBtn {
 					<input class="size" type="text" name="mobile" placeholder="000-0000-0000">
 					<br>
 					<div id="buttons">
-						<input class="size login" type="submit" value="회원가입">
+						<input class="size login" type="button" value="회원가입" onclick="go_save()">
 					</div>
 				</fieldset>
 			</form>

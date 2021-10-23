@@ -65,38 +65,33 @@ a.join:link, a.join:hover, a.join:visited, a.join {
 </head>
 <body>
 	<div id="main">
-<style>
-article {
-text-align: center;
-}
-h1 {font-size: 30px;}
-</style>
-<article class="frame">
+		<article class="frame">
 			<div class="frame">
-				<img class="logo" alt="로고이미지" src="${pageContext.request.contextPath}/img/common/logo_01.png" style="width: 150px;">
+				<img class="logo" alt="로고이미지" src="${pageContext.request.contextPath}/img/common/logo_01.png"
+					style="width: 150px;">
 			</div>
-	<form method="post" action="${pageContext.request.contextPath}/IndieServlet?command=admin_login">
-		<fieldset>
-			<legend>관리자 모드에 오신 것을 환영합니다.</legend>
-			<br>
-			<br>
-			<label>Admin ID</label>
-			<input type="text" name="adm_id" value="${adm_id }">
-			<br>
-			<label>Password</label>
-			<input type="text" name="adm_pwd">
-			<br>
-			<br>
-			<br>
-		</fieldset>
-		<div class="class"></div>
-		<div id="button">
-			<input type="submit" value="로그인" class="submit">
-			<input type="button" value="아이디 비밀번호 찾기" class="submit"
-				onclick="location='${pageContext.request.contextPath}/adminMode/login_fail.html'">
-		</div>
-	</form>
-</article>
+			<form method="post" action="${pageContext.request.contextPath}/IndieServlet?command=admin_login">
+				<fieldset>
+					<legend>관리자 모드에 오신 것을 환영합니다.</legend>
+					<br>
+					<br>
+					<label>Admin ID</label>
+					<input type="text" name="adm_id" value="${adm_id }">
+					<br>
+					<label>Password</label>
+					<input type="password" name="adm_pwd">
+					<br>
+					<br>
+					<br>
+				</fieldset>
+				<div class="class"></div>
+				<div id="button">
+					<input type="submit" value="로그인" class="submit">
+					<input type="button" value="아이디 비밀번호 찾기" class="submit"
+						onclick="location='${pageContext.request.contextPath}/adminMode/login_fail.html'">
+				</div>
+			</form>
+		</article>
 	</div>
 	<div id="footer"></div>
 </body>

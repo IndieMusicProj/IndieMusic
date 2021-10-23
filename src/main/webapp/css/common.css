@@ -110,7 +110,7 @@ input.searchKeyword {
 	border-radius: 40px;
 }
 
-a.searchIcon {
+input.searchIcon {
 	position: relative;
 	left: -50px;
 	top: 7.5px;

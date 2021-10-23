@@ -105,6 +105,7 @@ dd.board_img {
 	min-height: 650px;
 	width: 90%;
 	margin: 0 auto 30px;
+	line-height: normal;
 }
 
 /* musicView에서 퍼온 것 */
@@ -146,7 +147,7 @@ dd.board_img {
 			<dl class="board_content_wrap">
 				<dd class="board_img">
 					<img class="imgDetail" alt="게시판 이미지"
-						src="${pageContext.request.contextPath}/img/music/${boardDetail.b_picture}" width="400">
+						src="${pageContext.request.contextPath}/img/board/${boardDetail.b_picture}" width="400">
 				</dd>
 				<dd class="board_content">
 					<div class="board_content_note">${boardDetail.b_content}</div>

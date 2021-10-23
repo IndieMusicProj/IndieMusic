@@ -20,7 +20,6 @@ public class IndexAction implements Action {
 		MusicDAO musicDAO = MusicDAO.getInstance();
 		
 		ArrayList<MusicVO> getIndexPopular = (ArrayList<MusicVO>) musicDAO.getIndexPopular();
-		
 		request.setAttribute("getIndexPopular", getIndexPopular);
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url);

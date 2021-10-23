@@ -19,7 +19,11 @@ public class KorDanceMusicAction implements Action {
 		// TODO 자동 생성된 메소드 스텁
 		String url = "/music/korDanChart.jsp";
 		
+		String id = request.getParameter("id");
+		System.out.println(id);
+		
 		MusicDAO musicDAO = MusicDAO.getInstance();
+		musicDAO.updateCnt(id);
 		
 		ArrayList<MusicVO> getKorDanceGenre = (ArrayList<MusicVO>) musicDAO.getKorDanceGenre();
 		

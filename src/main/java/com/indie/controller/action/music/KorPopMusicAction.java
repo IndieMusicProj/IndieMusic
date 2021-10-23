@@ -20,7 +20,11 @@ public class KorPopMusicAction implements Action {
 		// TODO 자동 생성된 메소드 스텁
 		String url = "/music/korPopChart.jsp";
 		
+		String id = request.getParameter("id");
+		System.out.println(id);
+		
 		MusicDAO musicDAO = MusicDAO.getInstance();
+		musicDAO.updateCnt(id);
 		
 		ArrayList<MusicVO> getKorPopular = (ArrayList<MusicVO>) musicDAO.getKorPopular();
 		

@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import ="com.indie.dto.MemberVO"%>
 <div id="aside">
 	<div class="subNavWrap">
 		<div class="title">
@@ -38,6 +39,19 @@
 			<br>
 			<li class="list">
 				<a class="navbtn" href="IndieServlet?command=ForNewest">- 해외</a>
+			</li>
+			<br>
+		</ul>
+	</div>
+	<div class="subNavWrap">
+		<div class="title">
+			<img src="${pageContext.request.contextPath}/img/common/icon_genre.png" alt="">
+			<span class="navName">추천음악</span>
+		</div>
+		<br>
+		<ul>
+			<li class="list">
+				<a class="navbtn" href="IndieServlet?command=random_form"> - 랜덤추천 </a>
 			</li>
 			<br>
 		</ul>
@@ -90,42 +104,40 @@
 	</div>
 	
 	<%	// 로그인 값이 존재 하면 보여지고 없으면 안보여짐.
-		// MemberVO loginUser = (MemberVO) session.getAttribute("loginUser");
+		 MemberVO loginUser = (MemberVO) session.getAttribute("loginUser");
 	
-		// if (loginUser != null) {
+		 if (loginUser != null) {
 	%>
-<!-- 	<div class="subNavWrap"> -->
-<!-- 		<div class="title"> -->
-<%-- 			<img src="${pageContext.request.contextPath}/img/common/icon_post.png" alt="마이뮤직"> --%>
-<!-- 			<span class="navName">마이 뮤직</span> -->
-<!-- 		</div> -->
-<!-- 		<br> -->
-<!-- 		<ul> -->
-<!-- 			<li class="list"> -->
-<!-- 				<a href="IndieServlet?command=Playlist_FormAction">- 플레이리스트 </a> -->
-<!-- 			</li> -->
-<!-- 			<br> -->
-<!-- 			<!-- 			 -->
-<!-- 			<li class="list"> -->
-<!-- 				<a href="IndieServlet?command=boardList_form"> - 나의 문의 내역 </a> -->
-<!-- 			</li> -->
-<!-- 			<br> -->
-<!-- 			<li class="list"> -->
-<!-- 				<a href="IndieServlet?command=boardList_form"> - FAQ </a> -->
-<!-- 			</li> -->
-<!-- 			<br> -->
-<!-- 			<li class="list"> -->
-<!-- 				<a href="IndieServlet?command=boardList_form"> - Notice </a> -->
-<!-- 			</li> -->
-<!-- 			<br>  -->
-<!-- 			-->
-<!-- 		</ul> -->
-<!-- 	</div> -->
+ 	<div class="subNavWrap">
+ 		<div class="title"> 
+ 			<img src="${pageContext.request.contextPath}/img/common/icon_genre.png" alt="마이뮤직 메뉴"> 
+ 			<span class="navName">마이 뮤직</span> 
+ 		</div> 
+ 		<br> 
+ 		<ul> 
+ 			<li class="list"> 
+ 				<a class="navbtn" href="IndieServlet?command=Playlist_My_Form">- 플레이리스트 </a> 
+ 			</li> 
+ 			<br> 
+<!-- 			<li class="list"> 
+ 				<a href="IndieServlet?command=boardList_form"> - 나의 문의 내역 </a>
+ 			</li> 
+ 			<br> 
+ 			<li class="list"> 
+ 				<a href="IndieServlet?command=boardList_form"> - FAQ </a> 
+ 			</li> 
+ 			<br> 
+ 			<li class="list"> 
+ 				<a href="IndieServlet?command=boardList_form"> - Notice </a> 
+ 			</li> 
+ 			<br>  -->
+ 		</ul> 
+ 	</div> 
 	<%
-	// } else {
+	 } else {
 	// 	<div class="hr"></div>
 	// </div>
-	// }
+	 }
 	%>
 	<div class="hr"></div>
 </div>

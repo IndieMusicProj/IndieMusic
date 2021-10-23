@@ -1,7 +1,6 @@
 package com.indie.controller.action.board;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -12,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.indie.controller.action.Action;
 import com.indie.dao.BoardDAO;
 import com.indie.dto.BoardVO;
+import com.indie.dto.PageVO;
 
 public class BoardListAll_FormAction implements Action {
 
@@ -23,13 +23,25 @@ public class BoardListAll_FormAction implements Action {
 		
 		String url = "board/boardList.jsp";
 		
-		BoardVO vo = new BoardVO();
+		int page = 1;
+
+		if (request.getParameter("page") != null) {
+			page = Integer.parseInt(request.getParameter("page"));
+		}
+		PageVO paging = new PageVO();
 		
-		List<BoardVO> boardList = boardDAO.getBoardListByNewest(vo);
+		int count = boardDAO.getAllCount();
+		
+		paging.setPage(page);	// 현재 페이지
+		paging.setTotalCount(count);	// 전체 레코드의 갯수
+		
+		List<BoardVO> boardList = boardDAO.getBoardListByNewestPaging(paging);
 		String title_category = request.getParameter("b_category");
+		
 		
 		request.setAttribute("boardList", boardList);
 		request.setAttribute("title_category", title_category);
+		request.setAttribute("paging", paging);
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 		dispatcher.forward(request, response);

@@ -115,9 +115,9 @@ input.deleteBtn:hover {
 						<img class="album" alt="${musicInfo.m_album_pic }"
 							src="${pageContext.request.contextPath}/img/music/${musicInfo.m_album_pic }">
 					</div>
-					<form id="insertMusic"
+					<form id="updateMusic"
 						action="${pageContext.request.contextPath}/IndieServlet?command=music_update&m_id=${musicInfo.m_id }" method="post"
-						name="formm">
+						name="formm" enctype="multipart/form-data">
 						<table>
 							<tr>
 								<td>

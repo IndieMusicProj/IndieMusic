@@ -19,7 +19,11 @@ public class ForDanceMusicAction implements Action {
 		// TODO 자동 생성된 메소드 스텁
 		String url = "/music/forDanChart.jsp";
 		
+		String id = request.getParameter("id");
+		System.out.println(id);
+		
 		MusicDAO musicDAO = MusicDAO.getInstance();
+		musicDAO.updateCnt(id);
 		
 		ArrayList<MusicVO> getForDanceGenre = (ArrayList<MusicVO>) musicDAO.getForDanceGenre();
 		

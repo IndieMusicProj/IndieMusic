@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <div id="aside">
 	<div class="welcome">
-		<span>[${adminVO.adm_id }] 님 환영합니다.</span>
+		<span>[${sessionScope.loginAdmin.adm_id}] 님 환영합니다.</span>
+		<span><a href="${pageContext.request.contextPath}/IndieServlet?command=logout">관리종료</a></span>
 	</div>
 	<div class="logo">
 		<a href="${pageContext.request.contextPath}/adminMode/adminIndex.jsp">

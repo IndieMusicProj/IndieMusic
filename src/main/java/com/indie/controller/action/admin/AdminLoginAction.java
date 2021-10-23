@@ -22,13 +22,18 @@ public class AdminLoginAction implements Action {
 		String adm_id = request.getParameter("adm_id");
 		String adm_pwd = request.getParameter("adm_pwd");
 
+		AdminVO adminVO = new AdminVO();
+		
+		adminVO.setAdm_id(adm_id);
+		adminVO.setAdm_pwd(adm_pwd);
+		
 		AdminDAO adminDAO = AdminDAO.getInstance();
-		AdminVO adminVO = adminDAO.getAdmin(adm_id);
+		AdminVO loginAdmin = adminDAO.loginAdmin(adminVO);
 
-		if (adminVO != null) {
-			if (adminVO.getAdm_pwd().equals(adm_pwd)) {
+		if (loginAdmin != null) {
+			if (loginAdmin.getAdm_pwd().equals(adm_pwd)) {
 				session.removeAttribute("adm_id");
-				session.setAttribute("adminVO", adminVO);
+				session.setAttribute("loginAdmin", loginAdmin);
 				url = request.getContextPath()+"/adminMode/adminIndex.jsp";
 			}
 		}
